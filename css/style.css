@@ -61,7 +61,7 @@ h4 {
 /* Buttons */ 
 .btn {
     min-width: 20px;
-    line-height: 50px;
+    line-height: 40px;
     padding: 0 20px;
     font-size: 16px;
     font-weight: 600;
@@ -95,33 +95,6 @@ h4 {
     box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
 }
 
-/* Input fields */
-.form-control {
-    padding-left: 10px;
-    border: 0;
-    border-bottom: 1px solid #212121;
-    border-radius: 0;
-    background-color: transparent; 
-    box-shadow: none;
-    outline: 0 none transparent;
-    -webkit-appearance:none;
- }
-
-textarea {
-    margin-top: 40px;
-    min-height: 200px;
-    resize: none;
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-bottom-color: #e1e1e1;
-}
-
-::-moz-placeholder,
-::-webkit-input-placeholder {
-    font-size: 16px;
-}
 
 /* LAYOUT
 ================================================== */
@@ -151,6 +124,11 @@ html, body {
 /* Background-color */
 .gray-bg {
     background-color: #e1e1e1;
+}
+
+video {
+   width: 100%;
+   height: auto;
 }
 
 /* HEADER
@@ -279,6 +257,10 @@ html, body {
     margin-bottom: 35px;
 }
 
+.site-section a.btn.btn-fill{
+    padding: 5px 20px;
+}
+
 /* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
@@ -315,7 +297,7 @@ html, body {
 
 .portfolio-item-info {
     position: absolute;
-    top: 150px;
+    top: 130px;
     left: 0px;
     z-index: 999;
     opacity: 0;
@@ -327,12 +309,13 @@ html, body {
 }
 
 .portfolio-item:hover .portfolio-item-info {
-    left: 50px;
+    left: 25px;
+    margin-right: 20px;
     opacity: 1;
 }
 
 .portfolio-item-info h4 {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     font-weight: 700;
     color: #fff;
 }
@@ -371,32 +354,43 @@ html, body {
 
 .modal-header {
     position: relative;
-    padding: 0;
-    height: 500px;
+    padding: 10px;
+    height: 350px;
 }
 
 .modal-header .close {
     position: absolute;
-    right: 0;
+    right: 10px;
     padding: 10px 11px;
     margin-top: 0;
     background-color: #fff;
+    border-color: #212121
     font-size: 16px;
     color: #212121;
-    border-left: 1px solid #212121;
-    border-bottom: 1px solid #212121;
     opacity: 1;
     transition: box-shadow 0.25s ease-in-out;
     -moz-transition: box-shadow 0.25s ease-in-out;
     -webkit-transition: box-shadow 0.25s ease-in-out;
     -o-transition: box-shadow 0.25s ease-in-out;
     -ms-transition: box-shadow 0.25s ease-in-out;
+    z-index: 1;
 }
 
 .modal-header .close:hover {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-body {
+    overflow:hidden
 }
 
 .modal-body h4 {
     font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
+.modal-body a.btn.btn-fill{
+    float: right;
+    font-size: 12px;
 }
